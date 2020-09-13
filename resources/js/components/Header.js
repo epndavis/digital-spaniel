@@ -31,20 +31,17 @@ class Header extends React.Component {
     render() {
         return (
             <header id="header">
-                <nav id="navbar" className='navbar navbar-expand-md navbar-light'>
-                    <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-6">
-                                <Link className='navbar-brand' to='/'>Home</Link>
-                            </div>
-                            <div className="col-6">
-                                <Link className='navbar-brand' to='/services'>Services</Link>
-                                <Link className='navbar-brand' to='/work'>Work</Link>
-                                <Link className='navbar-brand' to='/about'>About</Link>
-                                <Link className='navbar-brand' to='/blog'>Blog</Link>
-                                <Link className='navbar-brand' to='/contact'>Contact</Link>
-                            </div>
-                        </div>          
+                <nav id="navbar" className='navbar navbar-light'>
+                    <Link className='navbar-brand logo' to='/'>
+                        <img src="/images/logo.png" alt="Digital Spaniel Logo" />
+                    </Link>
+
+                    <div class="menu">
+                        <Link className='navbar-brand' to='/services'>Services</Link>
+                        <Link className='navbar-brand' to='/work'>Work</Link>
+                        <Link className='navbar-brand' to='/about'>About</Link>
+                        <Link className='navbar-brand' to='/blog'>Blog</Link>
+                        <Link className='navbar-brand' to='/contact'>Contact</Link>
                     </div>
                 </nav>
             </header> 

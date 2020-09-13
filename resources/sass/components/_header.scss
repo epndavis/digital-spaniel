@@ -5,15 +5,37 @@ header {
         left: 0;
         right: 0;
         transition: 0.2s;
+        z-index: 1;
+        padding: 1rem 0;
         
         &.sticky {
             background-color: white;
         }
-    }
 
-    .navbar-brand {
-        &:hover {
-            text-decoration: underline;
+        .logo {
+            margin-left: 10%;
+
+            img {
+                height: 60px;
+            }
+        }
+
+        .menu {
+            text-align: center;
+            width: 50%;
+
+            .navbar-brand {
+                color: white;
+                margin-right: 2.5rem;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
         }
     }
 }

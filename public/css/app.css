@@ -6,14 +6,38 @@ header #navbar {
   left: 0;
   right: 0;
   transition: 0.2s;
+  z-index: 1;
+  padding: 1rem 0;
 }
 
 header #navbar.sticky {
   background-color: white;
 }
 
-header .navbar-brand:hover {
+header #navbar .logo {
+  margin-left: 10%;
+}
+
+header #navbar .logo img {
+  height: 60px;
+}
+
+header #navbar .menu {
+  text-align: center;
+  width: 50%;
+}
+
+header #navbar .menu .navbar-brand {
+  color: white;
+  margin-right: 2.5rem;
+}
+
+header #navbar .menu .navbar-brand:hover {
   text-decoration: underline;
+}
+
+header #navbar .menu .navbar-brand:last-child {
+  margin: 0;
 }
 
 #home #welcome {
