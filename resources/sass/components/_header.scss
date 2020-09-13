@@ -1,0 +1,12 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .navbar-brand {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
