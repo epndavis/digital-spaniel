@@ -1,5 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+header #navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
+}
+
+header #navbar.sticky {
+  background-color: white;
+}
+
+header .navbar-brand:hover {
+  text-decoration: underline;
+}
+
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
