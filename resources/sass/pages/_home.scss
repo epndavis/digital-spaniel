@@ -1,0 +1,23 @@
+#home {
+    #welcome {
+        height: 100vh;
+
+        .welcome-text {
+            max-width: 400px;
+            margin: auto;
+
+            * {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        .welcome-image {
+            height: 100vh;
+            margin-left: -15px;
+            margin-right: -15px;
+            background-image: url('/images/Spaniel01_gradient_large.png');
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
