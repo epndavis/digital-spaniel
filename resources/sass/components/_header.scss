@@ -1,8 +1,15 @@
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: 0.2s;
+        
+        &.sticky {
+            background-color: white;
+        }
+    }
 
     .navbar-brand {
         &:hover {

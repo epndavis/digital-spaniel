@@ -51973,28 +51973,55 @@ var Header = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(Header);
 
-  function Header() {
+  function Header(props) {
+    var _this;
+
     _classCallCheck(this, Header);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    var lastPosition = 0;
+    window.addEventListener('scroll', function () {
+      var currentPosition = this.pageYOffset,
+          header = document.getElementById('header'),
+          navbar = document.getElementById('navbar'),
+          navHeight = navbar.offsetHeight;
+
+      if (header.getBoundingClientRect().top < 0) {
+        navbar.classList.add('sticky');
+
+        if (header.getBoundingClientRect().top > -150 || currentPosition < lastPosition) {
+          navbar.style.top = 0;
+        } else {
+          navbar.style.top = "-".concat(navHeight, "px");
+        }
+      } else {
+        navbar.classList.remove('sticky');
+      }
+
+      lastPosition = currentPosition;
+    });
+    return _this;
   }
 
   _createClass(Header, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+        id: "header"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        id: "navbar",
         className: "navbar navbar-expand-md navbar-light"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "container-fluid"
+        className: "container-fluid"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "row"
+        className: "row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "col-6"
+        className: "col-6"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "navbar-brand",
         to: "/"
       }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "col-6"
+        className: "col-6"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "navbar-brand",
         to: "/services"
