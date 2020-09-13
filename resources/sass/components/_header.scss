@@ -10,6 +10,12 @@ header {
         
         &.sticky {
             background-color: white;
+
+            .menu {
+                .navbar-brand { 
+                    color: black;
+                }
+            }
         }
 
         .logo {

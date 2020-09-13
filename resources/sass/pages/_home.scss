@@ -2,15 +2,6 @@
     #welcome {
         height: 100vh;
 
-        .welcome-text {
-            max-width: 400px;
-            margin: auto;
-
-            * {
-                margin-bottom: 2.5rem;
-            }
-        }
-
         .welcome-image {
             height: 100vh;
             margin-left: -15px;
@@ -18,6 +9,33 @@
             background-image: url('/images/Spaniel01_gradient_large.png');
             background-position: center;
             background-size: cover;
+        }
+    }
+
+    #capability {
+        padding: 6rem 0;
+
+        #capabilities-right {
+            padding: 0 2rem;
+
+            h4 {
+                text-transform: uppercase;
+            }
+
+            a {
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .descriptive-content {
+        max-width: 400px;
+        margin: auto;
+        font-size: 1.1em;
+
+        * {
+            margin-bottom: 2.5rem;
         }
     }
 }
