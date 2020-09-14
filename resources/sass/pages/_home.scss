@@ -29,6 +29,96 @@
         }
     }
 
+    #testimonials {  
+        padding: 4rem 0;
+
+        .slick-slider {
+            padding: 2rem 0;
+
+            .slick-track {
+                display: flex;
+                align-items: center;
+                padding: 2rem 0;
+
+                .slide {
+                    padding: 2rem;
+
+                    .card {
+                        transition: 0.2s;
+                        background-color: #E2E4E6;
+
+                        .card-body {
+                            padding: 2.25rem 1.5rem;
+                        }
+
+                        .testimonial-quote {
+                            position: relative;
+
+                            p {
+                                position: relative;
+                            }
+
+                            &:before, &:after {
+                                position: absolute;
+                                color: #C5CACE;
+                                font-size: 8em;
+                                line-height: 0.5em;
+                                height: 0;
+                                opacity: 0.6;
+                            }
+
+                            &:before {
+                                content: '\201C';
+                                top: 0;
+                                left: 0;
+                            }
+
+                            &:after {
+                                content: '\201D';
+                                bottom: 0;
+                                right: 0;
+                            }
+                        }
+
+                        .card-profile {
+                            height: 60px;
+                            width: 60px;
+                            border-radius: 100%;
+                            background-color: white;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                .slick-current {
+                    .card {
+                        transform: scale(1.25);
+                        background-color: #19293A;
+                        color: white;
+                    }
+                }
+            }
+
+            .slick-dots {
+                padding: 2rem 0;
+                bottom: -2rem;
+
+                li {
+                    &.slick-active {
+                        button:before {
+                            font-size: 1.4rem;
+                            line-height: 22px;
+                        }
+                    }   
+
+                    button:before {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
     .descriptive-content {
         max-width: 400px;
         margin: auto;

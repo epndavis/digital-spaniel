@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Testimonials from '../Testimonials'
 
 class Home extends React.Component {
     render() {
@@ -85,6 +86,10 @@ class Home extends React.Component {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div id="testimonials">
+                    <Testimonials/>
                 </div>
             </div>
         )
