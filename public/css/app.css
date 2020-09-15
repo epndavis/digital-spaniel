@@ -403,6 +403,54 @@ footer .links-container a {
   margin-bottom: 1rem;
 }
 
+#home #case_studies {
+  padding: 4rem 0;
+}
+
+#home #case_studies .slide-body {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  flex-direction: row-reverse;
+}
+
+#home #case_studies .slide-body .image-container {
+  width: 60%;
+}
+
+#home #case_studies .slide-body .content {
+  width: 40%;
+  padding: 6rem 1rem;
+  background-color: #19293A;
+  color: white;
+  position: relative;
+  display: none;
+}
+
+#home #case_studies .slide-body .content .slide-buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#home #case_studies .slide-body .content .slide-buttons .btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 0;
+}
+
+#home #case_studies .slick-current .slide-body {
+  flex-direction: row;
+}
+
+#home #case_studies .slick-current .slide-body .content {
+  display: block;
+}
+
+#home #case_studies .slick-current + .slick-slide .slide-body {
+  flex-direction: row;
+}
+
 #home #testimonials {
   padding: 4rem 0;
 }

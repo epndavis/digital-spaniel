@@ -29,6 +29,58 @@
         }
     }
 
+    #case_studies {
+        padding: 4rem 0;
+
+        .slide-body {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            flex-direction: row-reverse;
+
+            .image-container {
+                width: 60%;
+            }
+
+            .content {
+                width: 40%;
+                padding: 6rem 1rem;
+                background-color: #19293A;
+                color: white;
+                position: relative;
+                display: none;
+
+                .slide-buttons {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+
+                    .btn {
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+
+        .slick-current { 
+            .slide-body {
+                flex-direction: row;
+
+                .content {
+                    display: block;
+                }
+            }
+
+            & + .slick-slide {
+                .slide-body {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
     #testimonials {  
         padding: 4rem 0;
 
