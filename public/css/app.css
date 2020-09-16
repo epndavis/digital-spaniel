@@ -403,6 +403,52 @@ footer .links-container a {
   margin-bottom: 1rem;
 }
 
+#home #recent_projects {
+  padding: 5rem 0;
+}
+
+#home #recent_projects .btn {
+  border: 0;
+}
+
+#home #recent_projects .grid-item {
+  width: 50%;
+  position: relative;
+}
+
+#home #recent_projects .grid-item:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+#home #recent_projects .grid-item.item-width-2 {
+  width: 100%;
+}
+
+#home #recent_projects .grid-item.item-width-2:after {
+  padding-bottom: 50%;
+}
+
+#home #recent_projects .grid-item .grid-item-body {
+  position: absolute;
+  padding: 1rem 1rem 0 0;
+}
+
+@media (min-width: 600px) {
+  #home #recent_projects .grid-item {
+    width: 33.33333%;
+  }
+
+  #home #recent_projects .grid-item.item-width-2 {
+    width: 66.66666%;
+  }
+}
+
+#home #recent_projects .grid-item .content {
+  display: none;
+}
+
 #home #case_studies {
   padding: 4rem 0;
 }

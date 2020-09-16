@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Testimonials from '../Testimonials'
 import CaseStudies from '../CaseStudies'
+import RecentProjects from '../RecentProjects'
 
 class Home extends React.Component {
     render() {
@@ -87,6 +88,10 @@ class Home extends React.Component {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div id="recent_projects">
+                    <RecentProjects />
                 </div>
 
                 <div id="case_studies">
