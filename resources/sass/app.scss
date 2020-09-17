@@ -5,7 +5,13 @@
 @import './base/typography';
 
 // Components
-@import './components/header';
+@import './components/header',
+        './components/link',
+        './components/footer';
+
+// Pages
+@import './pages/home';
 
 // Vendor
-@import './vendor/bootstrap';
+@import './vendor/bootstrap',
+        './vendor/react-carousel';

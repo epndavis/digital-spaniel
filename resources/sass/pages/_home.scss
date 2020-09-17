@@ -1,0 +1,196 @@
+#home {
+    h1 {
+        span {
+            color: #506473;
+        }
+    }
+
+    #welcome {
+        height: 100vh;
+        position: relative;
+
+        .welcome-image {
+            background-image: url('/images/Spaniel01_gradient_large.png');
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 50%;
+        }
+    }
+
+    section {
+        padding: 6rem 0;
+    }
+
+    .list-group {
+        list-style: none;
+
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+
+    #capability {
+        #capabilities-right {
+            padding: 0 2rem;
+
+            h4 {
+                text-transform: uppercase;
+            }
+
+            a {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    #case_studies {
+        .slide-body {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            flex-direction: row-reverse;
+
+            .image-container {
+                width: 60%;
+            }
+
+            .content {
+                width: 40%;
+                padding: 6rem 1rem;
+                background-color: $primary;
+                color: white;
+                position: relative;
+                display: none;
+
+                .slide-buttons {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+
+                    .btn {
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+
+        .slick-current { 
+            .slide-body {
+                flex-direction: row;
+
+                .content {
+                    display: block;
+                }
+            }
+
+            & + .slick-slide {
+                .slide-body {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+    #testimonials {  
+        .slick-slider {
+            padding: 2rem 0;
+
+            .slick-track {
+                display: flex;
+                align-items: center;
+                padding: 2rem 0;
+
+                .slide {
+                    padding: 2rem;
+
+                    .card {
+                        transition: 0.2s;
+                        background-color: #E2E4E6;
+
+                        .card-body {
+                            padding: 2.25rem 1.5rem;
+                        }
+
+                        .testimonial-quote {
+                            position: relative;
+
+                            p {
+                                position: relative;
+                            }
+
+                            &:before, &:after {
+                                position: absolute;
+                                color: #C5CACE;
+                                font-size: 8em;
+                                line-height: 0.5em;
+                                height: 0;
+                                opacity: 0.6;
+                            }
+
+                            &:before {
+                                content: '\201C';
+                                top: 0;
+                                left: 0;
+                            }
+
+                            &:after {
+                                content: '\201D';
+                                bottom: 0;
+                                right: 0;
+                            }
+                        }
+
+                        .card-profile {
+                            height: 60px;
+                            width: 60px;
+                            border-radius: 100%;
+                            background-color: white;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                .slick-current {
+                    .card {
+                        transform: scale(1.25);
+                        background-color: $primary;
+                        color: white;
+                    }
+                }
+            }
+
+            .slick-dots {
+                padding: 2rem 0;
+                bottom: -2rem;
+
+                li {
+                    &.slick-active {
+                        button:before {
+                            font-size: 1.4rem;
+                            line-height: 22px;
+                        }
+                    }   
+
+                    button:before {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .descriptive-content {
+        max-width: 400px;
+        font-size: 1.1em;
+
+        * {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
