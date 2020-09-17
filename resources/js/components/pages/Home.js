@@ -37,8 +37,7 @@ class Home extends React.Component {
 
                 <section id="capability" className="container-fluid bg-light">
                     <div class="container">
-                        {/* Add in width 100 else for some reason the row is pushed off the page  */}
-                        <div class="row w-100">
+                        <div class="row">
                             <div class="col-12 col-sm-6">
                                 <div class="descriptive-content mb-4">
                                     <h1>

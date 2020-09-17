@@ -75,6 +75,27 @@
             .grid-item-body {
                 position: absolute;
                 padding: 1rem 1rem 0 0;
+
+                .card {
+                    .card-img-overlay {
+                        justify-content: flex-end;
+                        flex-direction: column;
+                        background: $primary;
+                        background: linear-gradient(0deg, $primary 0%, rgba(255,255,255,0) 100%);
+                        color: $light;
+                        display: none;
+
+                        a {
+                            color: $light;
+                        }
+                    }
+
+                    &:hover {
+                        .card-img-overlay {
+                            display: flex;
+                        }
+                    }
+                }
             }
 
             @media (min-width: 600px) {

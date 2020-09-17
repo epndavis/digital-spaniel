@@ -40,18 +40,21 @@ export default class Grid extends React.Component {
                 {this.state.items.map((project, index) => {
                     return <div className={ `grid-item item-width-${project.width}` } key={ index }>
                         <div class="grid-item-body">
-                        <img class="img-fluid" src={ project.image } />
-                        <div class="content">
-                            <h3>
-                                { project.title }
-                            </h3>
+                            <div class="card">
+                                <img class="card-img" src={ project.image } />
 
-                            <p>
-                                { project.description }
-                            </p>
+                                <div class="card-img-overlay">
+                                    <h3>
+                                        { project.title }
+                                    </h3>
 
-                            <Link to={ project.url }>Full Project</Link>
-                        </div>
+                                    <p>
+                                        { project.description }
+                                    </p>
+
+                                    <Link to={ project.url }>Full Project</Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 })}

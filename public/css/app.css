@@ -488,6 +488,23 @@ footer .links-container h3 {
   padding: 1rem 1rem 0 0;
 }
 
+#home #recent_projects .grid-item .grid-item-body .card .card-img-overlay {
+  justify-content: flex-end;
+  flex-direction: column;
+  background: #19293A;
+  background: linear-gradient(0deg, #19293A 0%, rgba(255, 255, 255, 0) 100%);
+  color: #EDEFF1;
+  display: none;
+}
+
+#home #recent_projects .grid-item .grid-item-body .card .card-img-overlay a {
+  color: #EDEFF1;
+}
+
+#home #recent_projects .grid-item .grid-item-body .card:hover .card-img-overlay {
+  display: flex;
+}
+
 @media (min-width: 600px) {
   #home #recent_projects .grid-item {
     width: 33.33333%;
