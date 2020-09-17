@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\TestimonialController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('projects')->name('projects.')->group(function() {
     Route::get('/', [ProjectController::class, 'index'])->name('index');
+});
+
+Route::prefix('testimonials')->name('testimonials.')->group(function() {
+    Route::get('/', [TestimonialController::class, 'index'])->name('index');
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
