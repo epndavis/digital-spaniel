@@ -47,6 +47,71 @@
         }
     }
 
+    #recent_projects {
+        padding: 5rem 0;
+
+        .btn {
+            border: 0;
+        }
+        
+        .grid-item {
+            width: 50%;
+            position: relative;
+
+            &:after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+
+            &.item-width-2 {
+                width: 100%;
+
+                &:after {
+                    padding-bottom: 50%;
+                }
+            }
+
+            .grid-item-body {
+                position: absolute;
+                padding: 1rem 1rem 0 0;
+
+                .card {
+                    .card-img-overlay {
+                        justify-content: flex-end;
+                        flex-direction: column;
+                        background: $primary;
+                        background: linear-gradient(0deg, $primary 0%, rgba(255,255,255,0) 100%);
+                        color: $light;
+                        display: none;
+
+                        a {
+                            color: $light;
+                        }
+                    }
+
+                    &:hover {
+                        .card-img-overlay {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+
+            @media (min-width: 600px) {
+                width: 33.33333%;
+
+                &.item-width-2 {
+                    width: 66.66666%;
+                }
+            }
+
+            .content {
+                display: none;
+            }
+        }
+    }
+
     #case_studies {
         .slide-body {
             display: flex;
