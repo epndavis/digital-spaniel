@@ -9,98 +9,126 @@ class Home extends React.Component {
         return (
             <div>
                 <div id="welcome" className="container-fluid">
-                    <div className="row align-items-center h-100">
-                        <div className="col-6">
-                            <div class="descriptive-content">
-                                <p>
-                                    BRAND, DEV, ECOM, MARKETING
-                                </p>
+                    <div class="container h-100">
+                        <div className="row align-items-center h-100">
+                            <div className="col-6">
+                                <div class="descriptive-content">
+                                    <p class="text-info">
+                                        BRAND, DEV, ECOM, MARKETING
+                                    </p>
 
-                                <h1>
-                                    We unleash <br />
-                                    <span>business potential</span>
-                                </h1>
+                                    <h1>
+                                        We unleash <br />
+                                        <span>business potential</span>
+                                    </h1>
 
-                                <p>
-                                    We create brand experiences which are memorable and distinct. Our experienced team create and develop brands with personality and resonance.
-                                </p>
+                                    <p>
+                                        We create brand experiences which are memorable and distinct. Our experienced team create and develop brands with personality and resonance.
+                                    </p>
 
-                                <Link to='/contact'>Let's talk</Link>
+                                    <Link class="link-primary" to='/contact'>Let's talk</Link>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-6">
-                            <div class="welcome-image"></div>
                         </div>
                     </div>
+
+                    <div class="welcome-image"></div>
                 </div>
 
-                <div id="capability" className="container-fluid bg-light">
-                    {/* Add in width 100 else for some reason the row is pushed off the page  */}
-                    <div class="row w-100">
-                        <div class="col-6">
-                            <div class="descriptive-content">
-                                <h1>
-                                    What are <br />
-                                    <span>we capable of</span>
-                                </h1>
+                <section id="capability" className="container-fluid bg-light">
+                    <div class="container">
+                        {/* Add in width 100 else for some reason the row is pushed off the page  */}
+                        <div class="row w-100">
+                            <div class="col-12 col-sm-6">
+                                <div class="descriptive-content mb-4">
+                                    <h1>
+                                        What are <br />
+                                        <span>we capable of</span>
+                                    </h1>
 
-                                <p>
-                                    By focusing on design as an enabler and putting a huge emphasis on our clients as co-producers, we create innovative, sustainable marketing that enhances brand experience and user engagement.
-                                </p>
+                                    <p>
+                                        By focusing on design as an enabler and putting a huge emphasis on our clients as co-producers, we create innovative, sustainable marketing that enhances brand experience and user engagement.
+                                    </p>
 
-                                <Link to='/contact'>Our process</Link>
+                                    <Link class="link-primary" to='/contact'>Our process</Link>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div id="capabilities-right">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <h4>
-                                            Brand
-                                        </h4>
+                            <div class="col-12 col-sm-6">
+                                <div id="capabilities-right">
+                                    <div class="row">
+                                        <div class="col-6 mb-2">
+                                            <h4>
+                                                Brand
+                                            </h4>
 
-                                        <Link>Brand Strategy</Link>
+                                            <ul class="list-group">
+                                                <li>
+                                                    <Link class="link-secondary">Brand Strategy</Link>
+                                                </li>
 
-                                        <Link>Logo & Name</Link>
+                                                <li>
+                                                    <Link class="link-secondary">Logo & Name</Link>
+                                                </li>
 
-                                        <Link>Identity & Collateral</Link>
+                                                <li>
+                                                    <Link class="link-secondary">Identity & Collateral</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="col-6 mb-2">
+                                            <h4>
+                                                Marketing
+                                            </h4>
 
-                                        <h4>
-                                            Development
-                                        </h4>
+                                            <ul class="list-group">
+                                                <li>
+                                                    <Link class="link-secondary">Digital</Link>
+                                                </li>
 
-                                        <Link>eCommerce</Link>
+                                                <li>
+                                                    <Link class="link-secondary">Market Research</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-                                        <Link>Web Development</Link>
+                                        <div class="col-6 mb-2">
+                                            <h4>
+                                                Development
+                                            </h4>
 
-                                        <Link>Mobile Apps</Link>
-                                    </div>
-                                    <div class="col-4">
-                                        <h4>
-                                            Marketing
-                                        </h4>
+                                            <ul class="list-group">
+                                                <li>
+                                                    <Link class="link-secondary">eCommerce</Link>
+                                                </li>
 
-                                        <Link>Digital</Link>
+                                                <li>
+                                                    <Link class="link-secondary">Web Development</Link>
+                                                </li>
 
-                                        <Link>Market Research</Link>
+                                                <li>
+                                                    <Link class="link-secondary">Mobile Apps</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div id="recent_projects">
+                <section id="recent_projects" class="container-fluid">
                     <RecentProjects />
-                </div>
+                </section>
 
-                <div id="case_studies">
+                <section id="case_studies" class="container-fluid">
                     <CaseStudies />
-                </div>
+                </section>
 
-                <div id="testimonials">
+                <section id="testimonials" class="container-fluid">
                     <Testimonials/>
-                </div>
+                </section>
             </div>
         )
     }

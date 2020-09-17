@@ -1,20 +1,39 @@
 #home {
+    h1 {
+        span {
+            color: #506473;
+        }
+    }
+
     #welcome {
         height: 100vh;
+        position: relative;
 
         .welcome-image {
-            height: 100vh;
-            margin-left: -15px;
-            margin-right: -15px;
             background-image: url('/images/Spaniel01_gradient_large.png');
             background-position: center;
             background-size: cover;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 50%;
+        }
+    }
+
+    section {
+        padding: 6rem 0;
+    }
+
+    .list-group {
+        list-style: none;
+
+        li {
+            margin-bottom: 1rem;
         }
     }
 
     #capability {
-        padding: 6rem 0;
-
         #capabilities-right {
             padding: 0 2rem;
 
@@ -23,7 +42,6 @@
             }
 
             a {
-                display: block;
                 margin-bottom: 1rem;
             }
         }
@@ -74,8 +92,6 @@
     }
 
     #case_studies {
-        padding: 4rem 0;
-
         .slide-body {
             display: flex;
             align-items: center;
@@ -89,7 +105,7 @@
             .content {
                 width: 40%;
                 padding: 6rem 1rem;
-                background-color: #19293A;
+                background-color: $primary;
                 color: white;
                 position: relative;
                 display: none;
@@ -126,8 +142,6 @@
     }
 
     #testimonials {  
-        padding: 4rem 0;
-
         .slick-slider {
             padding: 2rem 0;
 
@@ -189,7 +203,7 @@
                 .slick-current {
                     .card {
                         transform: scale(1.25);
-                        background-color: #19293A;
+                        background-color: $primary;
                         color: white;
                     }
                 }
@@ -217,7 +231,6 @@
 
     .descriptive-content {
         max-width: 400px;
-        margin: auto;
         font-size: 1.1em;
 
         * {
