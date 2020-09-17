@@ -1,0 +1,49 @@
+a {
+    &.link {
+        &-primary {
+            font-weight: 800;
+            position: relative;
+
+            &:after {
+                content: "";
+                border-bottom: 3px solid #C34465;
+                position: absolute;
+                left: 0;
+                right: 0;
+                transition: 0.2s;
+                bottom: -5px;
+            }
+
+            &:hover {
+                text-decoration: none;
+
+                &:after {
+                    right: 0;
+                }
+            }
+        }
+
+        &-secondary {
+            &:after {
+                content: '\003E';
+                border-radius: 100%;
+                background-color: $primary;
+                width: 1rem;
+                height: 1rem;
+                text-align: center;
+                line-height: 1rem;
+                display: none;
+                color: $light;
+                margin-left: 0.5rem;
+            }
+
+            &:hover {
+                text-decoration: none;
+                
+                &:after {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
