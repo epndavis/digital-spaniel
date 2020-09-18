@@ -15,9 +15,12 @@ class GitHubApiService extends ApiService
     }
 
     /**
-     * @param string $repo
+     * Fetch repo data of owner 
      * 
-     * @return 
+     * @param string $repo
+     * @param string $owner
+     * 
+     * @return \Illuminate\Http\Response
      */
     public function getRepo(string $repo, string $owner)
     {       
