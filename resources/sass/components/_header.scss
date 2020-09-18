@@ -7,6 +7,9 @@ header {
         transition: 0.2s;
         z-index: 1;
         padding: 1rem 0;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
         
         &.sticky {
             background-color: white;

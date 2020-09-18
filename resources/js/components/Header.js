@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 
 class Header extends React.Component {
     constructor(props) {
@@ -31,19 +33,25 @@ class Header extends React.Component {
     render() {
         return (
             <header id="header">
-                <nav id="navbar" className='navbar navbar-light'>
+                <Navbar id="navbar" expand="lg">
                     <Link className='navbar-brand logo' to='/'>
                         <img src="/images/logo.png" alt="Digital Spaniel Logo" />
                     </Link>
 
                     <div class="menu">
-                        <Link className='navbar-brand' to='/services'>Services</Link>
-                        <Link className='navbar-brand' to='/work'>Work</Link>
-                        <Link className='navbar-brand' to='/about'>About</Link>
-                        <Link className='navbar-brand' to='/blog'>Blog</Link>
-                        <Link className='navbar-brand' to='/contact'>Contact</Link>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="m-auto">
+                                <Link className='navbar-brand' to='/services'>Services</Link>
+                                <Link className='navbar-brand' to='/work'>Work</Link>
+                                <Link className='navbar-brand' to='/about'>About</Link>
+                                <Link className='navbar-brand' to='/blog'>Blog</Link>
+                                <Link className='navbar-brand' to='/contact'>Contact</Link>
+                            </Nav>
+                        </Navbar.Collapse>
                     </div>
-                </nav>
+                    </Navbar>
             </header> 
         )
     }
