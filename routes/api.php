@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\GitHubController;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\TestimonialController;
 use Illuminate\Http\Request;
@@ -22,6 +23,10 @@ Route::prefix('projects')->name('projects.')->group(function() {
 
 Route::prefix('testimonials')->name('testimonials.')->group(function() {
     Route::get('/', [TestimonialController::class, 'index'])->name('index');
+});
+
+Route::prefix('github')->name('github.')->group(function() {
+    Route::get('/{repo}', [GitHubController::class, 'index'])->name('index');
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
